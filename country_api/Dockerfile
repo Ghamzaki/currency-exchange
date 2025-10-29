@@ -2,10 +2,20 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
-COPY requirements.txt .
+FROM ubuntu:latest
+
+# Install Python 3 and pip
 RUN apt-get update && apt-get install -y python3-pip
+
+# Upgrade pip for best practices
 RUN python3 -m pip install --upgrade pip
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
+
+# Now proceed with your original steps
+COPY requirements.txt .
+#RUN pip install -r requirements.txt
+
+# Or, use python3 to be explicit
+RUN python3 -m pip install -r requirements.txt
 
 COPY .
 
