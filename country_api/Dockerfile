@@ -2,6 +2,9 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
+# Ensure apt is updated and python3-pip is installed
+RUN apt-get update && apt-get install -y python3-pip
+
 # Upgrade pip for best practices
 RUN python3 -m pip install --upgrade pip
 
