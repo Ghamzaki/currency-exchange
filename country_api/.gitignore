@@ -1,1 +1,9 @@
-.env
+MYSQL_DATABASE = railway
+MYSQL_PUBLIC_URL = mysql://root:AXXtAneGcmWnmVRsKbMqlTElRrwAgrDH@hopper.proxy.rlwy.net:10760/railway
+MYSQL_ROOT_PASSWORD = AXXtAneGcmWnmVRsKbMqlTElRrwAgrDH
+MYSQL_URL = mysql://root:AXXtAneGcmWnmVRsKbMqlTElRrwAgrDH@mysql.railway.internal:3306/railway
+MYSQLDATABASE = railway
+MYSQLHOST = mysql.railway.internal
+MYSQLPASSWORD = AXXtAneGcmWnmVRsKbMqlTElRrwAgrDH
+MYSQLPORT = 3306
+MYSQLUSER = root
