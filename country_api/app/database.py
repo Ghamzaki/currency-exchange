@@ -7,9 +7,6 @@ logger = logging.getLogger(__name__)
 
 def create_table():
     conn = get_connection()
-    if conn is None:
-        logger.error("Failed to get database connection for table creation.")
-        return
     cursor = conn.cursor()
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS countries (
