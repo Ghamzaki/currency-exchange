@@ -30,9 +30,12 @@ def get_connection():
             host=settings.DB_HOST,
             user=settings.DB_USER,
             password=settings.DB_PASSWORD,
-            database=settings.DB_NAME
+            database=settings.DB_NAME,
+            port=int(settings.DB_PORT) if settings.DB_PORT else 3306
         )
+        if connection.is_connected():
+            logger.info("Connected to MySQL successfully.")
         return connection
     except Error as e:
-        logger.error(f" Error connecting to MySQL: {e}")
+        logger.error(f"Error connecting to MySQL: {e}")
         return None
